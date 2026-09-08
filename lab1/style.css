@@ -319,21 +319,20 @@ footer a:link {
   overflow: hidden;
 }
 
+.culture-photos {
+  overflow: hidden;
+  width: 100%;
+  padding: 20px;
+  border-radius: 12px;
+}
+
 .culture-photos img {
-  width: 360px;
-  height: 240px;
+  width: 400px;
+  height: 280px;
   object-fit: cover;
   float: left;
   margin-right: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.26);
-}
-
-.culture-photos img {
-  float: left;
-  margin-right: 20px;
-  border-radius: 8px;
-  max-width: 100%;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.26);
 }
 
@@ -343,7 +342,7 @@ footer a:link {
   font-family: "Roboto Slab", sans-serif;
   font-size: 16px;
   padding: 0 0 auto;
-  line-height: 2.0;
+  line-height: 1.5;
 }
 
 .places-maps {
@@ -371,8 +370,20 @@ a[href^="https://yandex.ru"] {
   font-size: 20px;
   margin: 0;
   padding: 0;
-  line-height: 1.5;
+  line-height: 1.0;
 }
+
+
+/* media */
+/* media */
+/* media */
+/* media */
+/* media */
+/* media */
+/* media */
+/* media */
+/* media */
+/* media */
 
 @media (max-width: 768px) {
 
