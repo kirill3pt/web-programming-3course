@@ -1,0 +1,682 @@
+html {
+  background-color: gray;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.body-index {
+  width: auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.63);
+}
+
+.header-index {
+  text-align: center;
+  font-family: "Oswald";
+  font-size: 20px;
+  font-weight: 700;
+  padding: 5px 0;
+}
+
+aside {
+  width: auto;
+  height: auto;
+  text-align: center;
+  background-color: #b4dbfc; 
+  font-family: "Segoe UI";
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  padding: 10px 0; 
+  border-radius: 8px;
+}
+
+aside li {
+  display: inline;
+  padding: 15px 20px;
+}
+
+aside li:hover {
+  border-left: 3px solid black;
+  border-radius: 8px;
+  background-color: rgb(155, 155, 155);
+  padding: 15px 20px;
+}
+
+aside a {
+  text-decoration: none;
+  color: rgb(75, 75, 75);
+  display: inline-block;
+  padding: 5px 0;
+}
+
+aside a:active {
+  color: #fcfcfc;
+  transform: scale(1.05);
+}
+
+.main-index {
+  display: flex;           
+  flex-wrap: wrap;         
+  gap: 20px;               
+  justify-content: center;
+  width: 100%;
+}
+
+.main-index img {
+  width: 360px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+main img:hover {
+  transform: scale(1.05);
+}
+
+main img:active {
+  transform: scale(0.97);
+}
+
+.ms-informer-link {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.footer-index {
+  width: auto;
+  height: auto;
+  text-align: center;
+  background-color: #b4dbfc; 
+  font-family: "Segoe UI";
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 25px;
+  padding: 10px 0; 
+  border-radius: 8px;
+}
+
+footer p {
+  display: inline;
+  text-decoration: none;
+  color: rgb(75, 75, 75);
+}
+
+footer p:hover {
+  position: relative;
+  border-left: 3px solid black;
+  border-radius: 8px;
+  background-color: #9b9b9b;
+}
+
+footer a:visited {
+    color: #6c757d;
+}
+
+footer a:link {
+    color: #4b4b4b;
+}
+
+.about-info {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.about-photo {
+  flex: 0 0 auto; 
+  text-align: center;
+}
+
+.about-photo img {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  border: 4px solid #b4dbfc;
+}
+
+.about-photo figcaption {
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 350;
+  font-size: 9px;
+}
+
+.bio {
+  flex: 1;
+  min-width: 0;
+}
+
+.bio pre {
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 350;
+  text-shadow: 3px 3px 3px #ababab;
+  font-size: 20px;
+}
+
+.bio h2 {
+  font-family: "Oswald";
+  font-weight: 700;
+  margin: 0 0 15px 0;
+}
+
+.diagramma {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2px;
+}
+
+.diagramma h2 {
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
+}
+
+.skill {
+  margin-bottom: 18px;
+}
+
+.skill-label {
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.skill-track {
+  display: block;
+  width: 100%;
+  height: 28px;
+  background: #e9ecef;
+  border-radius: 14px;
+  overflow: hidden;
+  margin: 0;
+}
+
+.skill-fill {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-family: "Roboto Slab", sans-serif;
+  height: 100%;
+  border-radius: 14px;
+  padding-right: 12px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.history-table {
+  border-collapse: separate;
+  border-spacing: 0px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.63);
+}
+
+.history-table td {
+  text-align: left;
+	padding: 10px;
+	border: 3px solid #b4dbfc;
+}
+
+.history-table td:first-child {
+  text-align: center;
+  font-weight: 700;
+}
+
+.history-table th {
+  text-align: center;
+  padding: 10px;
+	border: 3px solid #b4dbfc; 
+}
+
+.h2-index {
+  font-family: "Oswald";
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+}
+
+.history-table p, 
+.history-table time, 
+.history-table tr {
+  font-family: "Oswald";
+  font-weight: 400;
+}
+
+.history-table thead th:first-child {
+  border-radius: 13px 0 0 0;
+}
+
+.history-table thead th:last-child {
+  border-radius: 0 13px 0 0;
+}
+
+.history-table tbody tr:last-child td:first-child {
+  border-radius: 0 0 0 13px;
+}
+
+.history-table tbody tr:last-child td:last-child {
+  border-radius: 0 0 13px 0;
+}
+
+.history-table:hover {
+  transform: scale(1.01);
+}
+
+.geographic-place,
+.administration,
+.transport {
+  overflow: hidden;
+  width: 100%;
+  padding: 20px;
+  margin: -20px; 
+} 
+
+.geographic-place p,
+.administration p {
+  text-align: left;
+  font-family: "Roboto Slab", sans-serif;
+  padding-top: 60px;
+  font-size: 20px;
+}
+
+.geographic-place img,
+.administration img,
+.transport img {
+  width: 360px;
+  height: 240px;
+  object-fit: cover;
+  float: left;
+  margin-right: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.26);
+}
+
+.transport h2 {
+  font-family: "Oswald";
+  font-size: 20px;
+}
+
+.transport li {
+  font-family: "Roboto Slab", sans-serif;
+  list-style: none;
+  font-size: 16px;
+  overflow: hidden;
+}
+
+.about-culture > p {
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 18px;
+  overflow: hidden;
+}
+
+.culture-photos img {
+  width: 360px;
+  height: 240px;
+  object-fit: cover;
+  float: left;
+  margin-right: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.26);
+}
+
+.culture-photos img {
+  float: left;
+  margin-right: 20px;
+  border-radius: 8px;
+  max-width: 100%;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.26);
+}
+
+.culture-photos .description {
+  overflow: hidden;
+  text-align: left;
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 16px;
+  padding: 0 0 auto;
+  line-height: 2.0;
+}
+
+.places-maps {
+  overflow: hidden;
+  text-align: left;
+  text-decoration: none;
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 20px;
+  padding: 0 0 auto;
+  line-height: 2.0;
+}
+
+.places-maps:hover {
+  text-decoration: underline;
+}
+
+a[href^="https://yandex.ru"] {
+  color: #0a0d42cc;
+}
+
+.h3-places {
+  overflow: hidden;
+  text-align: left;
+  font-family: "Oswald";
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+
+  .body-index {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 15px;
+    border-radius: 0;
+  }
+
+  .main-index img {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+  }
+
+  .header-index {
+    font-size: 18px;
+  }
+
+  aside {
+    margin-bottom: 20px;
+    padding: 5px;
+  }
+
+  aside ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  aside li {
+    display: inline-block;
+    padding: 10px 12px;
+  }
+
+  aside li:hover {
+    padding: 10px 12px;
+  }
+
+  .main-index {
+    gap: 15px;
+  }
+
+  .about-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .about-photo {
+    width: 100%;
+  }
+
+  .bio {
+    width: 100%;
+  }
+
+  .bio h2 {
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .bio pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .diagramma {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .diagramma h2 {
+    font-size: 21px;
+  }
+
+  .skill-label {
+    font-size: 14px;
+  }
+
+  .skill-track {
+    height: 25px;
+  }
+
+  .skill-fill {
+    font-size: 12px;
+    padding-right: 8px;
+  }
+
+  .history-table {
+    width: 100%;
+    font-size: 14px;
+    overflow-wrap: break-word;
+  }
+
+  .history-table td,
+  .history-table th {
+    padding: 7px;
+    border-width: 2px;
+  }
+
+  .geographic-place,
+  .administration,
+  .transport {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .geographic-place p,
+  .administration p {
+    padding-top: 10px;
+    font-size: 16px;
+  }
+
+  .geographic-place img,
+  .administration img,
+  .transport img {
+    float: none;
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    margin: 0 auto 15px auto;
+  }
+
+  .transport h2 {
+    font-size: 18px;
+  }
+
+  .transport li {
+    font-size: 14px;
+    padding-left: 0;
+  }
+
+  .about-culture > p {
+    font-size: 16px;
+  }
+
+  .culture-photos {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .culture-photos img {
+    float: none;
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    margin: 0 auto 15px auto;
+  }
+
+  .culture-photos .description {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .places-maps {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .h3-places {
+    font-size: 18px;
+  }
+
+  .footer-index {
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  html {
+    background-color: white;
+  }
+
+  .body-index {
+    padding: 10px;
+    box-shadow: none;
+  }
+
+  .header-index {
+    font-size: 16px;
+    padding: 3px 0;
+  }
+
+  aside li {
+    display: block;
+    width: 100%;
+    padding: 8px 5px;
+  }
+
+  aside li:hover {
+    padding: 8px 5px;
+  }
+
+  aside a {
+    display: block;
+    padding: 5px;
+  }
+
+  .about-photo img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .h2-index {
+    font-size: 18px;
+  }
+
+  .bio h2 {
+    font-size: 20px;
+  }
+
+  .bio pre {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .geographic-place p,
+  .administration p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .about-culture > p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .diagramma h2 {
+    font-size: 19px;
+  }
+
+  .skill {
+    margin-bottom: 14px;
+  }
+
+  .skill-label {
+    font-size: 13px;
+  }
+
+  .skill-track {
+    height: 22px;
+  }
+
+  .skill-fill {
+    font-size: 11px;
+    padding-right: 7px;
+  }
+
+  .history-table {
+    font-size: 12px;
+  }
+
+  .history-table td,
+  .history-table th {
+    padding: 5px;
+    border-width: 1px;
+  }
+
+  .history-table,
+  .history-table td,
+  .history-table th {
+    overflow-wrap: anywhere;
+  }
+
+  .transport h2 {
+    font-size: 18px;
+  }
+
+  .transport li {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .places-maps {
+    font-size: 15px;
+  }
+
+  .h3-places {
+    font-size: 17px;
+  }
+
+  .footer-index {
+    font-size: 16px;
+  }
+
+  footer p {
+    display: block;
+    margin: 5px 0;
+  }
+}
