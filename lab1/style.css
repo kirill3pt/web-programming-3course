@@ -386,7 +386,6 @@ a[href^="https://yandex.ru"] {
 #feedback-form {
   padding: 20px;
   border-radius: 12px;
-  background-color: #f8f9fa;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
 }
 
@@ -440,11 +439,6 @@ textarea {
 input:focus,
 textarea:focus {
   border-color: #5b9bd5;
-}
-
-input:required,
-textarea:required {
-  border-left: 4px solid #5b9bd5;
 }
 
 input:valid,
