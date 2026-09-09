@@ -373,7 +373,133 @@ a[href^="https://yandex.ru"] {
   line-height: 1.0;
 }
 
+.input-boxes {
+  width: 100%;
+}
 
+.feedback {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: "Roboto Slab", sans-serif;
+}
+
+#feedback-form {
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+}
+
+fieldset {
+  border: 2px solid #b4dbfc;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+legend {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #b4dbfc;
+  border-radius: 8px;
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 15px;
+}
+
+fieldset > label {
+  color: #4b4b4b;
+}
+
+label + input,
+label + textarea {
+  margin-bottom: 10px;
+}
+
+input ~ textarea {
+  margin-top: 5px;
+}
+
+textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #5b9bd5;
+}
+
+input:required,
+textarea:required {
+  border-left: 4px solid #5b9bd5;
+}
+
+input:valid,
+textarea:valid {
+  background-color: #f4fff4;
+}
+
+input:invalid,
+textarea:invalid {
+  background-color: #fff5f5;
+}
+
+fieldset label:first-of-type {
+  font-size: 17px;
+}
+
+fieldset label:nth-of-type(2),
+fieldset label:nth-of-type(3) {
+  margin-top: 20px;
+}
+
+input:not([type="email"]) {
+  box-sizing: border-box;
+}
+
+input:placeholder-shown,
+textarea:placeholder-shown {
+  background-color: white;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #b4dbfc;
+  color: #4b4b4b;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #9b9b9b;
+  color: white;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+button:disabled {
+  opacity: 0.5;
+}
 /* media */
 /* media */
 /* media */
