@@ -1,3 +1,8 @@
+.base-block, #feedback-form {
+  border-radius: 8px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+}
+
 html {
   background-color: gray;
 }
@@ -382,14 +387,14 @@ a[href^="https://yandex.ru"] {
 }
 
 mark {
-    background: linear-gradient(120deg, #b4dbfc 0%, #8fc4f0 100%);
-    color: #1a1a2e;
-    padding: 4px 12px;
-    border-radius: 6px;
-    font-weight: 700;
-    font-style: italic;
-    box-shadow: 0 2px 8px rgba(180, 219, 252, 0.4);
-    display: inline-block;
+  background: linear-gradient(120deg, #b4dbfc 0%, #8fc4f0 100%);
+  color: #1a1a2e;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-style: italic;
+  box-shadow: 0 2px 8px rgba(180, 219, 252, 0.4);
+  display: inline-block;
 }
 
 .input-boxes {
@@ -401,11 +406,14 @@ mark {
   margin: 0 auto;
   font-family: "Roboto Slab", sans-serif;
 }
+.feedback h2 {
+  font-family: "Oswald";
+  text-align: center;
+}
 
 #feedback-form {
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
 }
 
 fieldset {
@@ -505,7 +513,6 @@ input:placeholder-shown {
 }
 
 button {
-  margin-top: 20px;
   padding: 10px 20px;
   border: none;
   border-radius: 8px;
@@ -515,6 +522,7 @@ button {
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
+  margin-top: 20px;
 }
 button:hover {
   background-color: #9b9b9b;
@@ -810,7 +818,9 @@ button:disabled {
     margin: 5px 0;
   }
   mark {
-      font-size: 14px;
-      padding: 2px 8px;
+    font-size: 14px;
+    padding: 2px 8px;
   }
 }
+
+/*# sourceMappingURL=style.css.map */

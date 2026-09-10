@@ -19,6 +19,25 @@ $background-color_5: #9b9b9b;
 $background-color_6: #f4fff4;
 $background-color_7: #fff5f5;
 $border-color_1: #5b9bd5;
+$spacing-unit: 10px;
+
+@mixin button-style {
+	padding: $spacing-unit 20px;
+	border: none;
+	border-radius: 8px;
+	background-color: $background-color_3;
+	color: $color_4;
+	font-family: $font-family_5;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.base-block {
+	border-radius: 8px;
+	box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+}
+
 
 html {
 	background-color: $background-color_1;
@@ -414,11 +433,16 @@ mark {
 	max-width: 600px;
 	margin: 0 auto;
 	font-family: $font-family_3;
+
+	h2 {
+		font-family: $font-family_1;
+		text-align: center;
+	}
 }
 #feedback-form {
+	@extend .base-block;
 	padding: 20px;
 	border-radius: 12px;
-	box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
 }
 fieldset {
 	border: 2px solid #b4dbfc;
@@ -518,16 +542,8 @@ input {
 	}
 }
 button {
+	@include button-style;
 	margin-top: 20px;
-	padding: 10px 20px;
-	border: none;
-	border-radius: 8px;
-	background-color: $background-color_3;
-	color: $color_4;
-	font-family: $font-family_5;
-	font-size: 16px;
-	font-weight: bold;
-	cursor: pointer;
 	&:hover {
 		background-color: $background-color_5;
 		color: $color_8;
