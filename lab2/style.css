@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+.body-index {
+  width: auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.63);
+}
+
+html {
+  background-color: rgb(219, 219, 219);
+}
+aside {
+  width: auto;
+  height: auto;
+  text-align: center;
+  font-family: "Segoe UI";
+  font-size: 14px;
+}
+aside li {
+    display: inline;
+    padding: 15px 20px;
+}
+
