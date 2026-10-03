@@ -4,13 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>Автомагазин</title>
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
@@ -21,125 +18,368 @@
                 </div>
                 <search>
                     <form class="input-group" method="get" action="">
-                        <input type="search" name="q" class="form-control" placeholder="Поиск...">
+                        <input type="search" name="q" class="form-control" placeholder="Поиск..."
+                            aria-label="Поиск товаров">
+
                         <button class="btn btn-outline-secondary dropdown-toggle" type="button"
-                            data-bs-toggle="dropdown">
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             Browse
                         </button>
                         <ul class="dropdown-menu">
                             <li>
+                                <p class="dropdown-item">ХОДОВАЯ ЧАСТЬ</p>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li> 
+                                <a class="dropdown-item" href="#">
+                                    Тормозные системы
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Элеметны подвески
+                                </a>
                                 <a class="dropdown-item" href="#">
                                     Шины и диски
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="#">
-                                    Автомобильные масла
-                                </a>
+                                <hr class="dropdown-divider">
                             </li>
+                            <p class="dropdown-item">АВТОХИМИЯ</p>
                             <li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
                                 <a class="dropdown-item" href="#">
-                                    Запасные части
+                                    Технические жидкости
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Средства для ухода за авто
                                 </a>
                             </li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    Всё
-                                </a>
-                            </li>
                         </ul>
                     </form>
                 </search>
             </div>
-            <div class="cart">
-                <img src="images/cart.svg" alt="Корзина">
-            </div>
+            <a class="cart" href="/cart" aria-label="Корзина">
+                <img src="images/cart.svg" alt="">
+                <span class="cart-count">0</span>
+            </a>
+
         </div>
+        <!-- Основное меню -->
         <aside>
+
             <hr>
+
             <ul class="main-menu">
+
                 <li>
                     <a href="">ГЛАВНАЯ</a>
                 </li>
+
                 <li>
                     <a href="">ШИНЫ И ДИСКИ</a>
+
                     <ul class="submenu">
                         <li><a href="">Летние</a></li>
                         <li><a href="">Зимние</a></li>
                         <li><a href="">Всесезонные</a></li>
                     </ul>
                 </li>
+
                 <li>
                     <a href="">АВТОМОБИЛЬНЫЕ МАСЛА</a>
+
                     <ul class="submenu">
                         <li><a href="">Синтетика</a></li>
                         <li><a href="">Полусинтетика</a></li>
                         <li><a href="">Минеральное</a></li>
                     </ul>
                 </li>
+
                 <li>
                     <a href="">ЗАПАСНЫЕ ЧАСТИ</a>
                 </li>
+
                 <li>
                     <a href="">О НАС</a>
                 </li>
             </ul>
-            <hr>
         </aside>
     </header>
     <main>
+        <!-- Карусель -->
         <section>
+
             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+
                 <div class="carousel-inner">
+
                     <div class="carousel-item active">
-                        <img src="images/motul.jpg" class="d-block w-100" alt="Автомобильное масло">
+                        <img src="images/motul.jpg" class="d-block w-100" alt="Автомобильное масло Motul">
                     </div>
+
                     <div class="carousel-item">
-                        <img src="images/motul.jpg" class="d-block w-100" alt="Автомобильное масло">
+                        <img src="images/motul.jpg" class="d-block w-100" alt="Автомобильное масло Motul">
                     </div>
+
                     <div class="carousel-item">
-                        <img src="images/motul.jpg" class="d-block w-100" alt="Автомобильное масло">
+                        <img src="images/motul.jpg" class="d-block w-100" alt="Автомобильное масло Motul">
+                    </div>
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="prev" aria-label="Предыдущий слайд">
+
+                    <span class="carousel-control-prev-icon" aria-hidden="true">
+                    </span>
+
+                    <span class="visually-hidden">
+                        Предыдущий
+                    </span>
+
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="next" aria-label="Следующий слайд">
+
+                    <span class="carousel-control-next-icon" aria-hidden="true">
+                    </span>
+
+                    <span class="visually-hidden">
+                        Следующий
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- Категории -->
+        <div class="grid-4">
+
+            <a href="/" class="tile tile-1">
+                <img src="images/category1.jpg" alt="Шины">
+            </a>
+
+            <a href="/" class="tile tile-2">
+                <img src="images/category2.jpg" alt="Автомобильные масла">
+            </a>
+
+            <a href="/" class="tile tile-3">
+                <img src="images/category3.jpg" alt="Запасные части">
+            </a>
+
+            <a href="/" class="tile tile-4">
+                <img src="images/category4.jpg" alt="Диски">
+            </a>
+
+        </div>
+
+        <!-- Популярные товары -->
+        <section>
+
+            <h2>ПОПУЛЯРНЫЕ ПРЕДМЕТЫ</h2>
+
+            <div class="cards-row">
+
+                <div class="card">
+                    <img src="images/mobil.jpg" class="card-img-top" alt="Масло Mobil 5W-30" loading="lazy">
+
+                    <div class="card-body">
+                        <p class="card-text">
+                            Масло Mobil 5W-30
+                        </p>
+
+                        <button class="btn-add" type="button" data-id="1" data-name="Масло Mobil 5W-30"
+                            data-price="1200">
+                            Добавить в корзину
+                        </button>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">
-                        Previous
-                    </span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">
-                        Next
-                    </span>
-                </button>
+
+                <div class="card">
+                    <img src="images/castrol.jpg" class="card-img-top" alt="Масло Castrol 10W-40" loading="lazy">
+
+                    <div class="card-body">
+                        <p class="card-text">
+                            Масло Castrol 10W-40
+                        </p>
+
+                        <button class="btn-add" type="button" data-id="2" data-name="Масло Castrol 10W-40"
+                            data-price="1500">
+                            Добавить в корзину
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/michelin.jpg" class="card-img-top" alt="Шина Michelin 205/55" loading="lazy">
+
+                    <div class="card-body">
+                        <p class="card-text">
+                            Шина Michelin 205/55
+                        </p>
+
+                        <button class="btn-add" type="button" data-id="3" data-name="Шина Michelin 205/55"
+                            data-price="8000">
+                            Добавить в корзину
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/bridgestone.jpg" class="card-img-top" alt="Шина Bridgestone 195/65" loading="lazy">
+
+                    <div class="card-body">
+                        <p class="card-text">
+                            Шина Bridgestone 195/65
+                        </p>
+
+                        <button class="btn-add" type="button" data-id="4" data-name="Шина Bridgestone 195/65"
+                            data-price="7500">
+                            Добавить в корзину
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/disk.jpg" class="card-img-top" alt="Литой диск R16" loading="lazy">
+
+                    <div class="card-body">
+                        <p class="card-text">
+                            Диск литой R16
+                        </p>
+
+                        <button class="btn-add" type="button" data-id="5" data-name="Диск литой R16" data-price="6000">
+                            Добавить в корзину
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/battery.jpg" class="card-img-top" alt="Аккумулятор 60Ah" loading="lazy">
+
+                    <div class="card-body">
+                        <p class="card-text">
+                            Аккумулятор 60Ah
+                        </p>
+
+                        <button class="btn-add" type="button" data-id="6" data-name="Аккумулятор 60Ah"
+                            data-price="5500">
+                            Добавить в корзину
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/spark-plugs.jpg" class="card-img-top" alt="Свечи зажигания" loading="lazy">
+
+                    <div class="card-body">
+                        <p class="card-text">
+                        </p>
+
+                        <button class="btn-add" type="button" data-id="7" data-name="Свечи зажигания (4 шт)">
+                            Добавить в корзину
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/brake-pads.jpg" class="card-img-top" alt="Тормозные колодки" loading="lazy">
+                    <div class="card-body">
+                        <p class="card-text">
+                            Тормозные колодки
+                        </p>
+                        <button class="btn-add" type="button" data-id="8" data-name="Тормозные колодки">
+                            Добавить в корзину
+                        </button>
+                    </div>
+                </div>
             </div>
         </section>
-        <div class="grid-4">
-            <a href="/" class="tile tile-1"><img src="" alt=""></a>
-            <a href="#" class="tile tile-2"><img src="" alt=""></a>
-            <a href="#" class="tile tile-3"><img src="" alt=""></a>
-            <a href="#" class="tile tile-4"><img src="" alt=""></a>
-        </div>
-        <section>
-            <h2>ПОПУЛЯРНЫЕ ПРЕДМЕТЫ</h2>
-            <div class="grid-8">
-                <a href="/" class="tile tile-1"><img src="" alt=""></a>
-                <a href="#" class="tile tile-2"><img src="" alt=""></a>
-                <a href="#" class="tile tile-3"><img src="" alt=""></a>
-                <a href="#" class="tile tile-4"><img src="" alt=""></a>
-                <a href="/" class="tile tile-5"><img src="" alt=""></a>
-                <a href="#" class="tile tile-6"><img src="" alt=""></a>
-                <a href="#" class="tile tile-7"><img src="" alt=""></a>
-                <a href="#" class="tile tile-8"><img src="" alt=""></a>
+        <section class="ad">
+            <img src="images/Feature.png">
+        </section>
+        <section class="subscribe">
+            <div class="subscribe-inner">
+                <div class="subscribe-left">
+                    <img class="subscribe-img" src="images/subscribe.png" alt="Подписка">
+                    <p class="subscribe-quote">«Скорость — это ещё не всё»</p>
+                </div>
+                <div class="subscribe-right">
+                    <p class="subscribe-text">Подпишитесь на рассылку...</p>
+                    <form class="subscribe-form">
+                        <input type="email" class="subscribe-input" placeholder="Ваш email">
+                        <button type="button" class="subscribe-btn">Subscribe</button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo">
+                        <img src="images/logo.png" alt="Автомагазин">
+                    </a>
+                    <p class="footer-desc">
+                        Мы продаём шины, диски, масла и запчасти для вашего автомобиля.
+                    </p>
+                </div>
+    
+                <nav class="footer-nav">
+                    <div class="footer-col">
+                        <h4 class="footer-heading">О КОМПАНИИ</h4>
+                        <ul>
+                            <li><a href="#">Главная</a></li>
+                            <li><a href="#">Магащин</a></li>
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Как это работает?</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer-col">
+                        <h4 class="footer-heading">КАТАЛОГ</h4>
+                        <ul>
+                            <li><a href="#">Шины и диски</a></li>
+                            <li><a href="#">Автомобильные масла</a></li>
+                            <li><a href="#">Запасные части</a></li>
+                            <li><a href="#">Аккумуляторы</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer-col">
+                        <h4 class="footer-heading">ПОМОЩЬ</h4>
+                        <ul>
+                            <li><a href="#">Доставка</a></li>
+                            <li><a href="#">Оплата</a></li>
+                            <li><a href="#">Возврат</a></li>
+                            <li><a href="#">Гарантия</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-inner">
+                <p class="footer-copy">© 2026 Автомагазин. Все права защищены.</p>
+                <ul class="footer-links">
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                    <li><a href="#">Условия использования</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 </html>

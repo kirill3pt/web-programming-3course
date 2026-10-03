@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Автомагазин</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo-search">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Автомагазин">
+                </div>
+                <search>
+                    <form class="input-group" method="get" action="">
+                        <input type="search" name="q" class="form-control" placeholder="Поиск..."
+                            aria-label="Поиск товаров">
+
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Browse
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <p class="dropdown-item">ХОДОВАЯ ЧАСТЬ</p>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <a class="dropdown-item" href="#">
+                                Тормозные системы
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                Элеметны подвески
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                Шины и диски
+                            </a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <p class="dropdown-item">АВТОХИМИЯ</p>
+                            <li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <a class="dropdown-item" href="#">
+                                Технические жидкости
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                Средства для ухода за авто
+                            </a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                        </ul>
+                    </form>
+                </search>
+            </div>
+            <a class="cart" href="/cart" aria-label="Корзина">
+                <img src="images/cart.svg" alt="">
+                <span class="cart-count">0</span>
+            </a>
+
+        </div>
+        <!-- Основное меню -->
+        <aside>
+
+            <hr>
+
+            <ul class="main-menu">
+
+                <li>
+                    <a href="">ГЛАВНАЯ</a>
+                </li>
+
+                <li>
+                    <a href="">ШИНЫ И ДИСКИ</a>
+
+                    <ul class="submenu">
+                        <li><a href="">Летние</a></li>
+                        <li><a href="">Зимние</a></li>
+                        <li><a href="">Всесезонные</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="">АВТОМОБИЛЬНЫЕ МАСЛА</a>
+
+                    <ul class="submenu">
+                        <li><a href="">Синтетика</a></li>
+                        <li><a href="">Полусинтетика</a></li>
+                        <li><a href="">Минеральное</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="">ЗАПАСНЫЕ ЧАСТИ</a>
+                </li>
+
+                <li>
+                    <a href="">О НАС</a>
+                </li>
+            </ul>
+        </aside>
+    </header>
+    <main>
+    
+    </main>
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo">
+                        <img src="images/logo.png" alt="Автомагазин">
+                    </a>
+                    <p class="footer-desc">
+                        Мы продаём шины, диски, масла и запчасти для вашего автомобиля.
+                    </p>
+                </div>
+
+                <nav class="footer-nav">
+                    <div class="footer-col">
+                        <h4 class="footer-heading">О КОМПАНИИ</h4>
+                        <ul>
+                            <li><a href="#">Главная</a></li>
+                            <li><a href="#">Магащин</a></li>
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Как это работает?</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4 class="footer-heading">КАТАЛОГ</h4>
+                        <ul>
+                            <li><a href="#">Шины и диски</a></li>
+                            <li><a href="#">Автомобильные масла</a></li>
+                            <li><a href="#">Запасные части</a></li>
+                            <li><a href="#">Аккумуляторы</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4 class="footer-heading">ПОМОЩЬ</h4>
+                        <ul>
+                            <li><a href="#">Доставка</a></li>
+                            <li><a href="#">Оплата</a></li>
+                            <li><a href="#">Возврат</a></li>
+                            <li><a href="#">Гарантия</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-inner">
+                <p class="footer-copy">© 2026 Автомагазин. Все права защищены.</p>
+                <ul class="footer-links">
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                    <li><a href="#">Условия использования</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
