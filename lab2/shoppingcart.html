@@ -64,7 +64,7 @@
                     </form>
                 </search>
             </div>
-            <a class="cart" href="shoppingcart.html" aria-label="Корзина">
+            <a class="cart" href="shoppingcart.html" aria-label=" ">
                 <img src="images/cart.svg" alt="">
                 <span class="cart-count">0</span>
             </a>
@@ -78,7 +78,7 @@
             <ul class="main-menu">
 
                 <li>
-                    <a href="">ГЛАВНАЯ</a>
+                    <a href="index.html">ГЛАВНАЯ</a>
                 </li>
 
                 <li>
@@ -112,21 +112,70 @@
         </aside>
     </header>
     <main>
-    <section class="subscribe">
-        <div class="subscribe-inner">
-            <div class="subscribe-left">
-                <img class="subscribe-img" src="images/avatar.jpg" alt="Подписка">
-                <p class="subscribe-quote">«Скорость — это ещё не всё»</p>
+        <div class="cart-table-wrapper">
+            <div class="cart-table-header">
+                <div>ДЕТАЛИ О ПРОДУКТЕ</div>
+                <div>ЦЕНА</div>
+                <div>КОЛИЧЕСТВО</div>
+                <div>ДОСТАВКА</div>
+                <div>ВСЕГО</div>
+                <div>ДЕЙСТВИЕ</div>
             </div>
-            <div class="subscribe-right">
-                <p class="subscribe-text">Подпишитесь на рассылку...</p>
-                <form class="subscribe-form">
-                    <input type="email" class="subscribe-input" placeholder="Ваш email">
-                    <button type="button" class="subscribe-btn">Subscribe</button>
-                </form>
+        
+            <div id="cart-items"></div>
+        </div>
+        
+        <div class="cart-summary">
+            <div class="cart-summary-top">
+                <a href="index.html" class="btn btn-outline-secondary">
+                    Продолжить покупки
+                </a>
+                <button type="button" id="clear-cart" class="btn btn-outline-danger">
+                    Очистить корзину
+                </button>
+            </div>
+            <div class="cart-summary-bottom">
+        
+                <!-- Адрес доставки -->
+                <div class="cart-delivery-block">
+                    <h3 class="cart-block-title">Адрес доставки</h3>
+                    <input type="text" class="form-control" placeholder="Город">
+                    <input type="text" class="form-control" placeholder="Улица, дом, квартира">
+                    <input type="text" class="form-control" placeholder="Индекс">
+                </div>
+        
+                <!-- Промокод -->
+                <div class="cart-coupon-block">
+                    <h3 class="cart-block-title">Промокод</h3>
+                    <input type="text" class="form-control" placeholder="Введите купон">
+                    <button type="button" class="btn btn-outline-secondary">Применить</button>
+                </div>
+                <!-- Блок оплаты -->
+                <div class="cart-checkout">
+                    <p class="cart-total">
+                        Итого: <span id="cart-total">0 ₽</span>
+                    </p>
+                    <button type="button" id="checkout" class="btn btn-primary btn-lg">
+                        Оплатить
+                    </button>
+                </div>
             </div>
         </div>
-    </section>
+        <section class="subscribe">
+            <div class="subscribe-inner">
+                <div class="subscribe-left">
+                    <img class="subscribe-img" src="images/avatar.jpg" alt="Подписка">
+                    <p class="subscribe-quote">«Скорость — это ещё не всё»</p>
+                </div>
+                <div class="subscribe-right">
+                    <p class="subscribe-text">Подпишитесь на рассылку...</p>
+                    <form class="subscribe-form">
+                        <input type="email" class="subscribe-input" placeholder="Ваш email">
+                        <button type="button" class="subscribe-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="footer">
         <div class="footer-main">
@@ -188,4 +237,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="scripts/script.js"></script>
 </body>
+
 </html>

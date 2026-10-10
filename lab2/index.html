@@ -63,7 +63,7 @@
                     </form>
                 </search>
             </div>
-            <a class="cart" href="/cart" aria-label="Корзина">
+            <a class="cart" href="shoppingcart.html" aria-label="Корзина">
                 <img src="images/cart.svg" alt="">
                 <span class="cart-count">0</span>
             </a>
@@ -161,146 +161,170 @@
         </section>
 
         <!-- Категории -->
-        <div class="grid-4">
-
-            <a href="/" class="tile tile-1">
-                <img src="images/category1.jpg" alt="Шины">
-            </a>
-
-            <a href="/" class="tile tile-2">
-                <img src="images/category2.jpg" alt="Автомобильные масла">
-            </a>
-
-            <a href="/" class="tile tile-3">
-                <img src="images/category3.jpg" alt="Запасные части">
-            </a>
-
-            <a href="/" class="tile tile-4">
-                <img src="images/category4.jpg" alt="Диски">
-            </a>
-
-        </div>
+        <section class="categories">
+            <h2>КАТЕГОРИИ</h2>
+        
+            <div class="categories-grid">
+        
+                <a href="/tires" class="category-card">
+                    <div class="category-card__image">
+                        <img src="images/wheels.webp" alt="Шины и диски" loading="lazy">
+                    </div>
+                    <div class="category-card__body">
+                        <h3 class="category-card__title">Шины и диски</h3>
+                        <p class="category-card__count">124 товара</p>
+                    </div>
+                </a>
+        
+                <a href="/oils" class="category-card">
+                    <div class="category-card__image">
+                        <img src="images/oil.jpg" alt="Автомобильные масла" loading="lazy">
+                    </div>
+                    <div class="category-card__body">
+                        <h3 class="category-card__title">Автомобильные масла</h3>
+                        <p class="category-card__count">86 товаров</p>
+                    </div>
+                </a>
+        
+                <a href="/parts" class="category-card">
+                    <div class="category-card__image">
+                        <img src="images/toolbox.jpg" alt="Запасные части" loading="lazy">
+                    </div>
+                    <div class="category-card__body">
+                        <h3 class="category-card__title">Запасные части</h3>
+                        <p class="category-card__count">312 товаров</p>
+                    </div>
+                </a>
+        
+                <a href="/wheels" class="category-card">
+                    <div class="category-card__image">
+                        <img src="images/" alt="" loading="lazy">
+                    </div>
+                    <div class="category-card__body">
+                        <h3 class="category-card__title">Литые диски</h3>
+                        <p class="category-card__count">48 товаров</p>
+                    </div>
+                </a>
+        
+            </div>
+        </section>
 
         <!-- Популярные товары -->
         <section>
-
             <h2>ПОПУЛЯРНЫЕ ПРЕДМЕТЫ</h2>
-
             <div class="cards-row">
-
-                <div class="card">
-                    <img src="images/mobil.jpg" class="card-img-top" alt="Масло Mobil 5W-30" loading="lazy">
-
-                    <div class="card-body">
-                        <p class="card-text">
-                            Масло Mobil 5W-30
-                        </p>
-
-                        <button class="btn-add" type="button" data-id="1" data-name="Масло Mobil 5W-30"
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="images/mobil5w30.webp" alt="Масло Mobil 5W-30 4L" loading="lazy">
+                    </div>
+                    <div class="product-card__body">
+                        <h3 class="product-card__title">Масло Mobil 5W-30 4L</h3>
+                        <p class="product-card__price">3 200 ₽</p>
+                        <button class="product-card__btn" type="button" data-id="1" data-name="Масло Mobil 5W-30 4L" data-image="images/mobil5w30.webp"
                             data-price="1200">
                             Добавить в корзину
                         </button>
                     </div>
                 </div>
-
-                <div class="card">
-                    <img src="images/castrol.jpg" class="card-img-top" alt="Масло Castrol 10W-40" loading="lazy">
-
-                    <div class="card-body">
-                        <p class="card-text">
-                            Масло Castrol 10W-40
-                        </p>
-
-                        <button class="btn-add" type="button" data-id="2" data-name="Масло Castrol 10W-40"
+        
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="images/castrol.webp" alt="Масло Castrol Magnatec 10W-40 4L" loading="lazy">
+                    </div>
+                    <div class="product-card__body">
+                        <h3 class="product-card__title">Масло Castrol Magnatec 10W-40 4L</h3>
+                        <p class="product-card__price">2 500 ₽</p>
+                        <button class="product-card__btn" type="button" data-id="2" data-name="Масло Castrol Magnatec 10W-40 4L" data-image="images/castrol.webp"
                             data-price="1500">
                             Добавить в корзину
                         </button>
                     </div>
                 </div>
-
-                <div class="card">
-                    <img src="images/michelin.jpg" class="card-img-top" alt="Шина Michelin 205/55" loading="lazy">
-
-                    <div class="card-body">
-                        <p class="card-text">
-                            Шина Michelin 205/55
-                        </p>
-
-                        <button class="btn-add" type="button" data-id="3" data-name="Шина Michelin 205/55"
+        
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="images/fuelpump.webp" alt="Электробензонасос BOSCH 0 580 453 453'" loading="lazy">
+                    </div>
+                    <div class="product-card__body">
+                        <h3 class="product-card__title">Электробензонасос BOSCH 0 580 453 453</h3>
+                        <p class="product-card__price">1 500 ₽</p>
+                        <button class="product-card__btn" type="button" data-id="3" data-name="Электробензонасос BOSCH 0 580 453 453" data-image="images/fuelpump.webp"
                             data-price="8000">
                             Добавить в корзину
                         </button>
                     </div>
                 </div>
-
-                <div class="card">
-                    <img src="images/bridgestone.jpg" class="card-img-top" alt="Шина Bridgestone 195/65" loading="lazy">
-
-                    <div class="card-body">
-                        <p class="card-text">
-                            Шина Bridgestone 195/65
-                        </p>
-
-                        <button class="btn-add" type="button" data-id="4" data-name="Шина Bridgestone 195/65"
+        
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="images/akb.webp" alt="АКБ DOMINATOR 60AH/600a" loading="lazy">
+                    </div>
+                    <div class="product-card__body">
+                        <h3 class="product-card__title">АКБ DOMINATOR 60AH/600a</h3>
+                        <p class="product-card__price">6 500 ₽</p>
+                        <button class="product-card__btn" type="button" data-id="4" data-name="АКБ DOMINATOR 60AH/600a" data-image="images/akb.webp"
                             data-price="7500">
                             Добавить в корзину
                         </button>
                     </div>
                 </div>
-
-                <div class="card">
-                    <img src="images/disk.jpg" class="card-img-top" alt="Литой диск R16" loading="lazy">
-
-                    <div class="card-body">
-                        <p class="card-text">
-                            Диск литой R16
-                        </p>
-
-                        <button class="btn-add" type="button" data-id="5" data-name="Диск литой R16" data-price="6000">
+        
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="images/vsmpo1.jpg" alt="Кованный диск ВСМПО R14 4x98 5.5j" loading="lazy">
+                    </div>
+                    <div class="product-card__body">
+                        <h3 class="product-card__title">Кованный диск ВСМПО R14 4x98 5.5j</h3>
+                        <p class="product-card__price">6 000 ₽</p>
+                        <button class="product-card__btn" type="button" data-id="5" data-name="Кованный диск ВСМПО R14 4x98 5.5j" data-image="images/vsmpo1.jpg"
+                            data-price="6000">
                             Добавить в корзину
                         </button>
                     </div>
                 </div>
-
-                <div class="card">
-                    <img src="images/battery.jpg" class="card-img-top" alt="Аккумулятор 60Ah" loading="lazy">
-
-                    <div class="card-body">
-                        <p class="card-text">
-                            Аккумулятор 60Ah
-                        </p>
-
-                        <button class="btn-add" type="button" data-id="6" data-name="Аккумулятор 60Ah"
+        
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="images/antifreeze.webp" alt="Антифриз SINTEC G12+ 3kg" loading="lazy">
+                    </div>
+                    <div class="product-card__body">
+                        <h3 class="product-card__title">Антифриз SINTEC G12+ 3kg</h3>
+                        <p class="product-card__price">1 500 ₽</p>
+                        <button class="product-card__btn" type="button" data-id="6" data-name="Антифриз SINTEC G12+ 3kg" data-image="images/antifreeze.webp"
                             data-price="5500">
                             Добавить в корзину
                         </button>
                     </div>
                 </div>
-
-                <div class="card">
-                    <img src="images/spark-plugs.jpg" class="card-img-top" alt="Свечи зажигания" loading="lazy">
-
-                    <div class="card-body">
-                        <p class="card-text">
-                        </p>
-
-                        <button class="btn-add" type="button" data-id="7" data-name="Свечи зажигания (4 шт)">
+        
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="images/svechi.webp" alt="Свечи зажигания" loading="lazy">
+                    </div>
+                    <div class="product-card__body">
+                        <h3 class="product-card__title">Свечи зажигания NGK-BPR6ES-11</h3>
+                        <p class="product-card__price">1 200 ₽</p>
+                        <button class="product-card__btn" type="button" data-id="7" data-name="Свечи зажигания NGK-BPR6ES-11" data-image="images/svechi.webp"
+                            data-price="800">
                             Добавить в корзину
                         </button>
                     </div>
                 </div>
-
-                <div class="card">
-                    <img src="images/brake-pads.jpg" class="card-img-top" alt="Тормозные колодки" loading="lazy">
-                    <div class="card-body">
-                        <p class="card-text">
-                            Тормозные колодки
-                        </p>
-                        <button class="btn-add" type="button" data-id="8" data-name="Тормозные колодки">
+        
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="images/brakepads.webp" alt="Тормозные колодки LADA SPORT 21080-3501800-83" loading="lazy">
+                    </div>
+                    <div class="product-card__body">
+                        <h3 class="product-card__title">Тормозные колодки LADA SPORT 21080-3501800-83</h3>
+                        <p class="product-card__price">2 500 ₽</p>
+                        <button class="product-card__btn" type="button" data-id="8" data-name="Тормозные колодки LADA SPORT 21080-3501800-83" data-image="images/brakepads.webp"
+                            data-price="2500">
                             Добавить в корзину
                         </button>
                     </div>
                 </div>
+        
             </div>
         </section>
         <section class="ad">
@@ -309,7 +333,7 @@
         <section class="subscribe">
             <div class="subscribe-inner">
                 <div class="subscribe-left">
-                    <img class="subscribe-img" src="images/subscribe.png" alt="Подписка">
+                    <img class="subscribe-img" src="images/avatar.jpg" alt="Подписка">
                     <p class="subscribe-quote">«Скорость — это ещё не всё»</p>
                 </div>
                 <div class="subscribe-right">
