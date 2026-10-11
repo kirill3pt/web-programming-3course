@@ -17,47 +17,42 @@
                     <img src="images/logo.png" alt="Автомагазин">
                 </div>
                 <search>
-                    <form class="input-group" method="get" action="">
-                        <input type="search" name="q" class="form-control" placeholder="Поиск..."
-                            aria-label="Поиск товаров">
-
-                        <button class="btn btn-outline-secondary dropdown-toggle" type="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Browse
+                    <form class="input-group" method="get" action="product.html">
+                        <input type="search" name="search" class="form-control" placeholder="Поиск..." aria-label="Поиск товаров">
+                    
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Каталог
                         </button>
-                        <ul class="dropdown-menu">
+                    
+                        <ul class="dropdown-menu dropdown-menu-end">
                             <li>
-                                <p class="dropdown-item">ХОДОВАЯ ЧАСТЬ</p>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li> 
-                                <a class="dropdown-item" href="#">
-                                    Тормозные системы
+                                <a class="dropdown-item" href="product.html">
+                                    Весь каталог
                                 </a>
-                                <a class="dropdown-item" href="#">
-                                    Элеметны подвески
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="product.html?categories=oils">
+                                    Автомобильные масла
                                 </a>
-                                <a class="dropdown-item" href="#">
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="product.html?categories=tires">
                                     Шины и диски
                                 </a>
                             </li>
                             <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <p class="dropdown-item">АВТОХИМИЯ</p>
-                            <li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <a class="dropdown-item" href="#">
-                                    Технические жидкости
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    Средства для ухода за авто
+                                <a class="dropdown-item" href="product.html?categories=parts">
+                                    Запасные части
                                 </a>
                             </li>
                             <li>
-                                <hr class="dropdown-divider">
+                                <a class="dropdown-item" href="product.html?categories=batteries">
+                                    Аккумуляторы
+                                </a>
                             </li>
                         </ul>
                     </form>
@@ -160,172 +155,16 @@
 
         </section>
 
-        <!-- Категории -->
         <section class="categories">
             <h2>КАТЕГОРИИ</h2>
-        
-            <div class="categories-grid">
-        
-                <a href="/tires" class="category-card">
-                    <div class="category-card__image">
-                        <img src="images/wheels.webp" alt="Шины и диски" loading="lazy">
-                    </div>
-                    <div class="category-card__body">
-                        <h3 class="category-card__title">Шины и диски</h3>
-                        <p class="category-card__count">124 товара</p>
-                    </div>
-                </a>
-        
-                <a href="/oils" class="category-card">
-                    <div class="category-card__image">
-                        <img src="images/oil.jpg" alt="Автомобильные масла" loading="lazy">
-                    </div>
-                    <div class="category-card__body">
-                        <h3 class="category-card__title">Автомобильные масла</h3>
-                        <p class="category-card__count">86 товаров</p>
-                    </div>
-                </a>
-        
-                <a href="/parts" class="category-card">
-                    <div class="category-card__image">
-                        <img src="images/toolbox.jpg" alt="Запасные части" loading="lazy">
-                    </div>
-                    <div class="category-card__body">
-                        <h3 class="category-card__title">Запасные части</h3>
-                        <p class="category-card__count">312 товаров</p>
-                    </div>
-                </a>
-        
-                <a href="/wheels" class="category-card">
-                    <div class="category-card__image">
-                        <img src="images/" alt="" loading="lazy">
-                    </div>
-                    <div class="category-card__body">
-                        <h3 class="category-card__title">Литые диски</h3>
-                        <p class="category-card__count">48 товаров</p>
-                    </div>
-                </a>
-        
+            <div class="categories-grid" id="categories-grid">
             </div>
         </section>
 
         <!-- Популярные товары -->
         <section>
             <h2>ПОПУЛЯРНЫЕ ПРЕДМЕТЫ</h2>
-            <div class="cards-row">
-                <div class="product-card">
-                    <div class="product-card__image">
-                        <img src="images/mobil5w30.webp" alt="Масло Mobil 5W-30 4L" loading="lazy">
-                    </div>
-                    <div class="product-card__body">
-                        <h3 class="product-card__title">Масло Mobil 5W-30 4L</h3>
-                        <p class="product-card__price">3 200 ₽</p>
-                        <button class="product-card__btn" type="button" data-id="1" data-name="Масло Mobil 5W-30 4L" data-image="images/mobil5w30.webp"
-                            data-price="1200">
-                            Добавить в корзину
-                        </button>
-                    </div>
-                </div>
-        
-                <div class="product-card">
-                    <div class="product-card__image">
-                        <img src="images/castrol.webp" alt="Масло Castrol Magnatec 10W-40 4L" loading="lazy">
-                    </div>
-                    <div class="product-card__body">
-                        <h3 class="product-card__title">Масло Castrol Magnatec 10W-40 4L</h3>
-                        <p class="product-card__price">2 500 ₽</p>
-                        <button class="product-card__btn" type="button" data-id="2" data-name="Масло Castrol Magnatec 10W-40 4L" data-image="images/castrol.webp"
-                            data-price="1500">
-                            Добавить в корзину
-                        </button>
-                    </div>
-                </div>
-        
-                <div class="product-card">
-                    <div class="product-card__image">
-                        <img src="images/fuelpump.webp" alt="Электробензонасос BOSCH 0 580 453 453'" loading="lazy">
-                    </div>
-                    <div class="product-card__body">
-                        <h3 class="product-card__title">Электробензонасос BOSCH 0 580 453 453</h3>
-                        <p class="product-card__price">1 500 ₽</p>
-                        <button class="product-card__btn" type="button" data-id="3" data-name="Электробензонасос BOSCH 0 580 453 453" data-image="images/fuelpump.webp"
-                            data-price="8000">
-                            Добавить в корзину
-                        </button>
-                    </div>
-                </div>
-        
-                <div class="product-card">
-                    <div class="product-card__image">
-                        <img src="images/akb.webp" alt="АКБ DOMINATOR 60AH/600a" loading="lazy">
-                    </div>
-                    <div class="product-card__body">
-                        <h3 class="product-card__title">АКБ DOMINATOR 60AH/600a</h3>
-                        <p class="product-card__price">6 500 ₽</p>
-                        <button class="product-card__btn" type="button" data-id="4" data-name="АКБ DOMINATOR 60AH/600a" data-image="images/akb.webp"
-                            data-price="7500">
-                            Добавить в корзину
-                        </button>
-                    </div>
-                </div>
-        
-                <div class="product-card">
-                    <div class="product-card__image">
-                        <img src="images/vsmpo1.jpg" alt="Кованный диск ВСМПО R14 4x98 5.5j" loading="lazy">
-                    </div>
-                    <div class="product-card__body">
-                        <h3 class="product-card__title">Кованный диск ВСМПО R14 4x98 5.5j</h3>
-                        <p class="product-card__price">6 000 ₽</p>
-                        <button class="product-card__btn" type="button" data-id="5" data-name="Кованный диск ВСМПО R14 4x98 5.5j" data-image="images/vsmpo1.jpg"
-                            data-price="6000">
-                            Добавить в корзину
-                        </button>
-                    </div>
-                </div>
-        
-                <div class="product-card">
-                    <div class="product-card__image">
-                        <img src="images/antifreeze.webp" alt="Антифриз SINTEC G12+ 3kg" loading="lazy">
-                    </div>
-                    <div class="product-card__body">
-                        <h3 class="product-card__title">Антифриз SINTEC G12+ 3kg</h3>
-                        <p class="product-card__price">1 500 ₽</p>
-                        <button class="product-card__btn" type="button" data-id="6" data-name="Антифриз SINTEC G12+ 3kg" data-image="images/antifreeze.webp"
-                            data-price="5500">
-                            Добавить в корзину
-                        </button>
-                    </div>
-                </div>
-        
-                <div class="product-card">
-                    <div class="product-card__image">
-                        <img src="images/svechi.webp" alt="Свечи зажигания" loading="lazy">
-                    </div>
-                    <div class="product-card__body">
-                        <h3 class="product-card__title">Свечи зажигания NGK-BPR6ES-11</h3>
-                        <p class="product-card__price">1 200 ₽</p>
-                        <button class="product-card__btn" type="button" data-id="7" data-name="Свечи зажигания NGK-BPR6ES-11" data-image="images/svechi.webp"
-                            data-price="800">
-                            Добавить в корзину
-                        </button>
-                    </div>
-                </div>
-        
-                <div class="product-card">
-                    <div class="product-card__image">
-                        <img src="images/brakepads.webp" alt="Тормозные колодки LADA SPORT 21080-3501800-83" loading="lazy">
-                    </div>
-                    <div class="product-card__body">
-                        <h3 class="product-card__title">Тормозные колодки LADA SPORT 21080-3501800-83</h3>
-                        <p class="product-card__price">2 500 ₽</p>
-                        <button class="product-card__btn" type="button" data-id="8" data-name="Тормозные колодки LADA SPORT 21080-3501800-83" data-image="images/brakepads.webp"
-                            data-price="2500">
-                            Добавить в корзину
-                        </button>
-                    </div>
-                </div>
-        
-            </div>
+            <div class="cards-row" id="popular-products"></div>
         </section>
         <section class="ad">
             <img src="images/Feature.png">
@@ -404,6 +243,7 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/data.js"></script>
     <script src="scripts/script.js"></script>
 </body>
 </html>
