@@ -14,95 +14,70 @@
     <header>
         <div class="header-top">
             <div class="logo-search">
-                <div class="logo">
+                <a href="index.html" class="logo">
                     <img src="images/logo.png" alt="Автомагазин">
-                </div>
+                </a>
                 <search>
                     <form class="input-group" method="get" action="product.html">
-                        <input type="search" name="search" class="form-control" placeholder="Поиск..." aria-label="Поиск товаров">
-                
-                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                        <input type="search" name="search" class="form-control" placeholder="Поиск..."
+                            aria-label="Поиск товаров">
+
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             Каталог
                         </button>
-                
+
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li>
-                                <a class="dropdown-item" href="product.html">
-                                    Весь каталог
-                                </a>
-                            </li>
+                            <li><a class="dropdown-item" href="index.html">Главная</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
+                            <li><a class="dropdown-item" href="product.html">Весь каталог</a></li>
                             <li>
-                                <a class="dropdown-item" href="product.html?categories=oils">
-                                    Автомобильные масла
-                                </a>
+                                <hr class="dropdown-divider">
                             </li>
-                            <li>
-                                <a class="dropdown-item" href="product.html?categories=tires">
-                                    Шины и диски
-                                </a>
+                            <li><a class="dropdown-item" href="product.html?categories=oils">Автомобильные масла</a>
                             </li>
-                            <li>
-                                <a class="dropdown-item" href="product.html?categories=parts">
-                                    Запасные части
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="product.html?categories=batteries">
-                                    Аккумуляторы
-                                </a>
-                            </li>
+                            <li><a class="dropdown-item" href="product.html?categories=tires">Шины и диски</a></li>
+                            <li><a class="dropdown-item" href="product.html?categories=parts">Запасные части</a></li>
+                            <li><a class="dropdown-item" href="product.html?categories=batteries">Аккумуляторы</a></li>
                         </ul>
                     </form>
                 </search>
             </div>
+
             <a class="cart" href="shoppingcart.html" aria-label="Корзина">
                 <img src="images/cart.svg" alt="">
                 <span class="cart-count">0</span>
             </a>
-    
         </div>
+
+        <!-- Оверлей меню -->
+        <div class="menu-overlay" id="menu-overlay"></div>
+
         <!-- Основное меню -->
         <aside>
-    
             <hr>
-    
+
             <ul class="main-menu">
-    
-                <li>
-                    <a href="index.html">ГЛАВНАЯ</a>
-                </li>
-    
+                <li><a href="index.html">ГЛАВНАЯ</a></li>
                 <li>
                     <a href="">ШИНЫ И ДИСКИ</a>
-    
                     <ul class="submenu">
                         <li><a href="">Летние</a></li>
                         <li><a href="">Зимние</a></li>
                         <li><a href="">Всесезонные</a></li>
                     </ul>
                 </li>
-    
                 <li>
                     <a href="">АВТОМОБИЛЬНЫЕ МАСЛА</a>
-    
                     <ul class="submenu">
                         <li><a href="">Синтетика</a></li>
                         <li><a href="">Полусинтетика</a></li>
                         <li><a href="">Минеральное</a></li>
                     </ul>
                 </li>
-    
-                <li>
-                    <a href="">ЗАПАСНЫЕ ЧАСТИ</a>
-                </li>
-    
-                <li>
-                    <a href="">О НАС</a>
-                </li>
+                <li><a href="">ЗАПАСНЫЕ ЧАСТИ</a></li>
             </ul>
         </aside>
     </header>
@@ -110,8 +85,18 @@
     <main>
         <div class="catalog">
 
+            <!-- Кнопка «Фильтры» -->
+            <button class="filters-toggle" type="button" id="filters-toggle">
+                Фильтры
+            </button>
+
+            <!-- Оверлей фильтров -->
+            <div class="filters-overlay" id="filters-overlay"></div>
+
             <!-- Сайдбар с фильтрами -->
-            <aside class="catalog-sidebar">
+            <aside class="catalog-sidebar" id="filters-panel">
+                <button class="filters-close" type="button" id="filters-close" aria-label="Закрыть фильтры">✕</button>
+
                 <h3 class="catalog-sidebar__title">Фильтры</h3>
 
                 <div class="filter-group">
@@ -133,11 +118,11 @@
             <div class="catalog-main">
                 <div class="catalog-search-info" id="search-info" style="display: none;">
                     Результаты поиска по запросу: <strong id="search-query"></strong>
-                    <button type="button" id="clear-search" class="catalog-search-clear" aria-label="Очистить поиск">✕</button>
+                    <button type="button" id="clear-search" class="catalog-search-clear"
+                        aria-label="Очистить поиск">✕</button>
                 </div>
-                <!-- Панель сортировки и диапазона цен -->
-                <div class="catalog-toolbar">
 
+                <div class="catalog-toolbar">
                     <div class="catalog-toolbar__group">
                         <label for="sort">Сортировка:</label>
                         <select id="sort" class="catalog-toolbar__select">
@@ -162,12 +147,9 @@
                             Найдено: <span id="products-count">0</span>
                         </span>
                     </div>
-
                 </div>
 
-                <!-- Сетка товаров -->
                 <div class="cards-row cards-row--catalog" id="catalog-products"></div>
-
             </div>
         </div>
     </main>

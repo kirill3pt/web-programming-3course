@@ -14,9 +14,9 @@
     <header>
         <div class="header-top">
             <div class="logo-search">
-                <div class="logo">
+                <a href="index.html" class="logo">
                     <img src="images/logo.png" alt="Автомагазин">
-                </div>
+                </a>
                 <search>
                     <form class="input-group" method="get" action="product.html">
                         <input type="search" name="search" class="form-control" placeholder="Поиск..." aria-label="Поиск товаров">
@@ -27,34 +27,19 @@
                         </button>
                 
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li>
-                                <a class="dropdown-item" href="product.html">
-                                    Весь каталог
-                                </a>
-                            </li>
+                            <li><a class="dropdown-item" href="index.html">Главная</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
+                            <li><a class="dropdown-item" href="product.html">Весь каталог</a></li>
                             <li>
-                                <a class="dropdown-item" href="product.html?categories=oils">
-                                    Автомобильные масла
-                                </a>
+                                <hr class="dropdown-divider">
                             </li>
-                            <li>
-                                <a class="dropdown-item" href="product.html?categories=tires">
-                                    Шины и диски
-                                </a>
+                            <li><a class="dropdown-item" href="product.html?categories=oils">Автомобильные масла</a>
                             </li>
-                            <li>
-                                <a class="dropdown-item" href="product.html?categories=parts">
-                                    Запасные части
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="product.html?categories=batteries">
-                                    Аккумуляторы
-                                </a>
-                            </li>
+                            <li><a class="dropdown-item" href="product.html?categories=tires">Шины и диски</a></li>
+                            <li><a class="dropdown-item" href="product.html?categories=parts">Запасные части</a></li>
+                            <li><a class="dropdown-item" href="product.html?categories=batteries">Аккумуляторы</a></li>
                         </ul>
                     </form>
                 </search>
@@ -98,10 +83,6 @@
     
                 <li>
                     <a href="">ЗАПАСНЫЕ ЧАСТИ</a>
-                </li>
-    
-                <li>
-                    <a href="">О НАС</a>
                 </li>
             </ul>
         </aside>

@@ -13,9 +13,9 @@
     <header>
         <div class="header-top">
             <div class="logo-search">
-                <div class="logo">
+                <a href="index.html" class="logo">
                     <img src="images/logo.png" alt="Автомагазин">
-                </div>
+                </a>
                 <search>
                     <form class="input-group" method="get" action="product.html">
                         <input type="search" name="search" class="form-control" placeholder="Поиск..." aria-label="Поиск товаров">
@@ -26,34 +26,19 @@
                         </button>
                     
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li>
-                                <a class="dropdown-item" href="product.html">
-                                    Весь каталог
-                                </a>
-                            </li>
+                            <li><a class="dropdown-item" href="index.html">Главная</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
+                            <li><a class="dropdown-item" href="product.html">Весь каталог</a></li>
                             <li>
-                                <a class="dropdown-item" href="product.html?categories=oils">
-                                    Автомобильные масла
-                                </a>
+                                <hr class="dropdown-divider">
                             </li>
-                            <li>
-                                <a class="dropdown-item" href="product.html?categories=tires">
-                                    Шины и диски
-                                </a>
+                            <li><a class="dropdown-item" href="product.html?categories=oils">Автомобильные масла</a>
                             </li>
-                            <li>
-                                <a class="dropdown-item" href="product.html?categories=parts">
-                                    Запасные части
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="product.html?categories=batteries">
-                                    Аккумуляторы
-                                </a>
-                            </li>
+                            <li><a class="dropdown-item" href="product.html?categories=tires">Шины и диски</a></li>
+                            <li><a class="dropdown-item" href="product.html?categories=parts">Запасные части</a></li>
+                            <li><a class="dropdown-item" href="product.html?categories=batteries">Аккумуляторы</a></li>
                         </ul>
                     </form>
                 </search>
@@ -66,42 +51,27 @@
         </div>
         <!-- Основное меню -->
         <aside>
-
             <hr>
 
             <ul class="main-menu">
-
-                <li>
-                    <a href="">ГЛАВНАЯ</a>
-                </li>
-
+                <li><a href="index.html">ГЛАВНАЯ</a></li>
                 <li>
                     <a href="">ШИНЫ И ДИСКИ</a>
-
                     <ul class="submenu">
                         <li><a href="">Летние</a></li>
                         <li><a href="">Зимние</a></li>
                         <li><a href="">Всесезонные</a></li>
                     </ul>
                 </li>
-
                 <li>
                     <a href="">АВТОМОБИЛЬНЫЕ МАСЛА</a>
-
                     <ul class="submenu">
                         <li><a href="">Синтетика</a></li>
                         <li><a href="">Полусинтетика</a></li>
                         <li><a href="">Минеральное</a></li>
                     </ul>
                 </li>
-
-                <li>
-                    <a href="">ЗАПАСНЫЕ ЧАСТИ</a>
-                </li>
-
-                <li>
-                    <a href="">О НАС</a>
-                </li>
+                <li><a href="">ЗАПАСНЫЕ ЧАСТИ</a></li>
             </ul>
         </aside>
     </header>
