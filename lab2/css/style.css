@@ -27,6 +27,9 @@ main {
 }
 
 .logo-search {
+    font-family: 'Sofia Sans', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 650;
     display: flex;
     align-items: center;
     gap: 40px;
@@ -85,6 +88,15 @@ aside a {
     color: inherit;
     text-decoration: none;
     transition: color 0.2s;
+    font-family: 'Sofia Sans';
+    font-size: 16px;
+    font-weight: 650;
+}
+
+ul {
+    font-family: 'Sofia Sans';
+    font-size: 16px;
+    font-weight: 650;
 }
 
 .main-menu {
@@ -158,6 +170,10 @@ aside a {
 .carousel {
     position: relative;
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
 .carousel-item img {
@@ -167,31 +183,6 @@ aside a {
     object-fit: cover;
 }
 
-.carousel::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100px;
-
-    background: linear-gradient(to bottom, #fff, transparent);
-    pointer-events: none;
-    z-index: 2;
-}
-
-.carousel::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100px;
-
-    background: linear-gradient(to top, #fff, transparent);
-    pointer-events: none;
-    z-index: 2;
-}
 
 /* Категории */
 
@@ -273,6 +264,9 @@ aside a {
 /* Товары */
 
 h2 {
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
     margin: 40px 0 20px;
     text-align: center;
 }
@@ -352,14 +346,14 @@ h2 {
     margin: 0;
     font-size: 18px;
     font-weight: 700;
-    color: #0d6efd;
+    color: #000000;
 }
 
 .product-card__btn {
     margin-top: auto;
     padding: 10px 16px;
 
-    background: #0d6efd;
+    background: #485cc7;
     color: #fff;
     border: none;
     border-radius: 6px;
@@ -374,11 +368,11 @@ h2 {
 }
 
 .product-card__btn:hover {
-    background: #0b5ed7;
+    background: #485cc7cc;
 }
 
 .product-card__btn.added {
-    background: #198754;
+    background: #485;
 }
 
 /* Рекламный баннер */
@@ -390,7 +384,9 @@ h2 {
 
 .ad img {
     display: block;
-    max-width: 100%;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 12px;
     height: auto;
 }
 
@@ -398,32 +394,13 @@ h2 {
 
 .subscribe {
     position: relative;
-
+    max-width: 1200px;
+    margin: 60px auto;
     background: url("../images/nurburgring.jpg") center / cover no-repeat;
     padding: 180px 20px;
     margin-top: 60px;
     margin-bottom: 60px;
-}
-
-.subscribe::before,
-.subscribe::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 100px;
-
-    pointer-events: none;
-}
-
-.subscribe::before {
-    top: 0;
-    background: linear-gradient(to bottom, #fff, transparent);
-}
-
-.subscribe::after {
-    bottom: 0;
-    background: linear-gradient(to top, #fff, transparent);
+    border-radius: 12px;
 }
 
 .subscribe-inner {
@@ -438,6 +415,8 @@ h2 {
 }
 
 .subscribe-left {
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -472,21 +451,25 @@ h2 {
 
 .subscribe-text {
     margin: 0;
-
+    font-family: "Sofia Sans";
+    font-weight: 600;
     color: #fff;
-    font-size: 15px;
+    font-size: 24px;
     line-height: 1.4;
 }
 
 .subscribe-form {
     display: flex;
     gap: 10px;
+    font-family: "Sofia Sans";
+    font-weight: 600;
 }
 
 .subscribe-input {
     padding: 10px 14px;
     min-width: 220px;
-
+    font-family: "Sofia Sans";
+    font-weight: 600;
     border: none;
     border-radius: 6px;
     font-size: 14px;
@@ -500,7 +483,7 @@ h2 {
 .subscribe-btn {
     padding: 10px 20px;
 
-    background: #0d6efd;
+    background: #685535;
     color: #fff;
     border: none;
     border-radius: 6px;
@@ -522,7 +505,6 @@ h2 {
 
 .footer {
     background: #fff;
-    color: #ccc;
     margin-top: auto;
 }
 
@@ -557,7 +539,8 @@ h2 {
 
 .footer-desc {
     margin: 0;
-
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
     font-size: 14px;
     line-height: 1.6;
     color: #727272;
@@ -569,17 +552,18 @@ h2 {
 }
 
 .footer-col {
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
     min-width: 140px;
 }
 
 .footer-heading {
     margin: 0 0 16px;
-
     font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #6d6d6d;
+    color: #4f4f4f;
 }
 
 .footer-col ul {
@@ -593,23 +577,24 @@ h2 {
 }
 
 .footer-col a {
-    color: #999;
+    color: #757575;
     text-decoration: none;
-    font-size: 14px;
-
+    font-size: 16px;
     transition: color 0.2s;
 }
 
 .footer-col a:hover {
-    color: #fff;
+    color: #090909;
 }
 
 .footer-bottom {
+
     padding: 20px;
     background: #8b8b8b;
 }
 
 .footer-bottom-inner {
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -620,10 +605,13 @@ h2 {
 }
 
 .footer-copy {
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
     margin: 0;
 
-    font-size: 13px;
+    font-size: 12px;
     color: #383838;
+
 }
 
 .footer-links {
@@ -636,10 +624,11 @@ h2 {
 }
 
 .footer-links a {
-    font-size: 13px;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-size: 11px;
     color: #383838;
     text-decoration: none;
-
     transition: color 0.2s;
 }
 
@@ -701,7 +690,8 @@ h2 {
 }
 
 .cart-product-name {
-    font-size: 14px;
+    font-style: "Sofia Sans";
+    font-size: 16px;
     font-weight: 600;
     overflow-wrap: anywhere;
 }
@@ -750,6 +740,8 @@ h2 {
 }
 
 .cart-summary {
+    font-family: "Sofia Sans";
+    font-optical-sizing: auto;
     max-width: 1200px;
     width: 90%;
     margin: 40px auto 0;
@@ -913,6 +905,10 @@ h2 {
     padding: 20px;
     height: fit-content;
 
+    font-family: 'Sofia Sans';
+    font-size: 18px;
+    font-weight: 500;
+
     position: sticky;
     top: 20px;
 }
@@ -920,7 +916,7 @@ h2 {
 .catalog-sidebar__title {
     margin: 0 0 20px;
 
-    font-size: 18px;
+    font-size: 26px;
     font-weight: 700;
 }
 
@@ -938,7 +934,7 @@ h2 {
 .filter-group__title {
     margin: 0 0 12px;
 
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -950,8 +946,10 @@ h2 {
     align-items: center;
     gap: 8px;
 
+    font-size: 16px;
     padding: 6px 0;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
 
     transition: color 0.2s;
@@ -978,7 +976,7 @@ h2 {
     border: 1px solid #dc3545;
     border-radius: 6px;
 
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 600;
     cursor: pointer;
 
@@ -999,7 +997,9 @@ h2 {
     flex-wrap: wrap;
     align-items: center;
     gap: 20px;
-
+    font-family: 'Sofia Sans';
+    font-size: 18px;
+    font-weight: 500;
     padding: 16px 20px;
     margin-bottom: 24px;
 
@@ -1013,7 +1013,7 @@ h2 {
     align-items: center;
     gap: 8px;
 
-    font-size: 14px;
+    font-size: 16px;
     color: #555;
 }
 
@@ -1023,7 +1023,7 @@ h2 {
 
     border: 1px solid #ddd;
     border-radius: 6px;
-    font-size: 14px;
+    font-size: 16px;
     outline: none;
 
     transition: border-color 0.2s;
@@ -1642,6 +1642,8 @@ h2 {
     .logo-search {
         gap: 20px;
     }
+
+    
 
     .logo img {
         height: 40px;
