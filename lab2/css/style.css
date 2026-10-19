@@ -121,7 +121,7 @@ ul {
 
 .main-menu>li>a:hover,
 .submenu a:hover {
-    color: #0d6efd;
+    color: #485cc7cc;
 }
 
 .submenu {
@@ -181,6 +181,11 @@ ul {
     width: 100%;
     height: 500px;
     object-fit: cover;
+}
+
+.btn-primary {
+    --bs-btn-bg: #485cc7;
+    --bs-btn-hover-bg: #485cc7cc;
 }
 
 
@@ -477,7 +482,7 @@ h2 {
 }
 
 .subscribe-input:focus {
-    box-shadow: 0 0 0 2px #0d6efd;
+    box-shadow: 0 0 0 2px #485cc7cc;
 }
 
 .subscribe-btn {
@@ -827,7 +832,7 @@ h2 {
 }
 
 .cart-total span {
-    color: #0d6efd;
+    color: #485cc7;
 }
 
 .cart-checkout .btn {
@@ -956,14 +961,14 @@ h2 {
 }
 
 .filter-check:hover {
-    color: #0d6efd;
+    color: #485cc7cc;
 }
 
 .filter-check input {
     width: 16px;
     height: 16px;
     cursor: pointer;
-    accent-color: #0d6efd;
+    accent-color: #485cc7;
 }
 
 .filter-reset {
@@ -1031,7 +1036,7 @@ h2 {
 
 .catalog-toolbar__select:focus,
 .catalog-toolbar__input:focus {
-    border-color: #0d6efd;
+    border-color: #485cc7;
 }
 
 .catalog-toolbar__input {
@@ -1041,7 +1046,7 @@ h2 {
 .catalog-toolbar__btn {
     padding: 8px 14px;
 
-    background: #0d6efd;
+    background: #485cc7cc;
     color: #fff;
     border: none;
     border-radius: 6px;
@@ -1127,7 +1132,7 @@ h2 {
 }
 
 .product-page__breadcrumbs a {
-    color: #0d6efd;
+    color: #485cc7;
     text-decoration: none;
     transition: color 0.2s;
 }
@@ -1157,14 +1162,14 @@ h2 {
     margin: 0;
     font-size: 32px;
     font-weight: 700;
-    color: #0d6efd;
+    color: #485cc7;
 }
 
 .product-page__btn {
     padding: 14px 28px;
     max-width: 280px;
 
-    background: #0d6efd;
+    background: #485cc7;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -1179,7 +1184,7 @@ h2 {
 }
 
 .product-page__btn:hover {
-    background: #0b5ed7;
+    background: #485cc7cc;
 }
 
 .product-page__btn.added {
@@ -1260,6 +1265,7 @@ h2 {
     margin: 0 0 30px;
     font-size: 28px;
     font-weight: 700;
+    font-family: "Oswald";
 }
 
 .checkout-step {
@@ -1273,7 +1279,7 @@ h2 {
 }
 
 .checkout-step.is-active {
-    border-color: #0d6efd;
+    border-color: #485cc7cc;
     box-shadow: 0 4px 16px rgba(13, 110, 253, 0.1);
 }
 
@@ -1315,7 +1321,7 @@ h2 {
 }
 
 .checkout-step.is-active .checkout-step__num {
-    background: #0d6efd;
+    background: #485cc7cc;
     color: #fff;
 }
 
@@ -1326,9 +1332,10 @@ h2 {
 
 .checkout-step__title {
     margin: 0;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 700;
     flex: 1;
+    font-family: "Oswald";
 }
 
 .checkout-step__check {
@@ -1407,12 +1414,12 @@ h2 {
 }
 
 .checkout-next {
-    background: #0d6efd;
+    background: #485cc7;
     color: #fff;
 }
 
 .checkout-next:hover {
-    background: #0b5ed7;
+    background: #485cc7cc;
 }
 
 .checkout-submit {
@@ -1449,18 +1456,18 @@ h2 {
 }
 
 .checkout-option:hover {
-    border-color: #0d6efd;
+    border-color: #485cc7cc;
 }
 
 .checkout-option input[type="radio"] {
     width: 18px;
     height: 18px;
-    accent-color: #0d6efd;
+    accent-color: #485cc7cc;
     cursor: pointer;
 }
 
 .checkout-option:has(input:checked) {
-    border-color: #0d6efd;
+    border-color: #485cc7cc;
     background: #e7f1ff;
 }
 
@@ -1531,7 +1538,7 @@ h2 {
 .order-item__sum {
     font-weight: 700;
     white-space: nowrap;
-    color: #0d6efd;
+    color: #485cc7cc;
 }
 
 .order-preview__total {
@@ -1545,7 +1552,7 @@ h2 {
 }
 
 .order-preview__total span {
-    color: #0d6efd;
+    color: #485cc7cc;
 }
 
 /* Кнопки фильтров */
@@ -1557,7 +1564,7 @@ h2 {
     padding: 12px 16px;
     margin-bottom: 16px;
 
-    background: #0d6efd;
+    background: #485cc7cc;
     color: #fff;
     border: none;
     border-radius: 8px;
