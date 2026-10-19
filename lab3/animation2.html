@@ -6,13 +6,11 @@
   <title>Мордочка котика — моргание</title>
   <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
+<body class="page--light">
   <header class="site-header">
     <nav class="animation-menu" aria-label="Выбор анимации">
       <a
-        class="animation-menu__link"
-        href="index.html"
-        aria-current="page"
+        class="animation-menu__link" href="index.html"
       >
         Моргание
       </a>
@@ -32,9 +30,51 @@
       </a>
     </nav>
   </header>
-
   <main class="container">
-    
+    <div class="figure">
+      <div class="figure__base"></div>
+
+      <div class="figure__bar figure__bar--wide">
+        <div class="figure__stripe figure__stripe figure__stripe--left"></div>
+        <div class="figure__sprout">
+          <div class="figure__stem"></div>
+          <div class="figure__leaf"></div>
+        </div>
+        <div class="figure__eyes">
+          <div class="figure__eye figure__eye--right">
+            <span class="figure__eye-dot"></span>
+            <span class="figure__eye-line figure__eye-line--upper"></span>
+            <span class="figure__eye-line figure__eye-line--lower"></span>
+          </div>
+        
+          <div class="figure__eye figure__eye--left">
+            <span class="figure__eye-dot"></span>
+            <span class="figure__eye-line figure__eye-line--upper"></span>
+            <span class="figure__eye-line figure__eye-line--lower"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="figure__bar figure__bar--tall">
+        <div class="figure__stripe figure__stripe--right"></div>
+        <div class="figure__sprout">
+          <div class="figure__stem"></div>
+        </div>
+        <div class="figure__eyes">
+          <div class="figure__eye figure__eye--right">
+            <span class="figure__eye-dot"></span>
+            <span class="figure__eye-line figure__eye-line--upper"></span>
+            <span class="figure__eye-line figure__eye-line--lower"></span>
+          </div>
+        
+          <div class="figure__eye figure__eye--left">
+            <span class="figure__eye-dot"></span>
+            <span class="figure__eye-line figure__eye-line--upper"></span>
+            <span class="figure__eye-line figure__eye-line--lower"></span>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 </body>
 </html>

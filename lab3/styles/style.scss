@@ -267,3 +267,321 @@ body {
     transform: translateX(-50%);
   }
 }
+
+// фигуры 
+
+
+$figure-color: #733063;
+$detail-color: #4891c2;
+$leaf-color: #d69825;
+$base-color: #733063;
+
+$left-stripe-color: #b488a0;
+$right-stripe-color: #6799c2;
+
+//анимации
+@keyframes squish-and-shake {
+
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  // Фигура прижимается к подложке
+  15% {
+    transform: translateY(2px) scaleX(1.08) scaleY(0.88);
+  }
+
+  // Короткая тряска в нижней точке
+  19% {
+    transform: translate(2px, 2px) scaleX(1.1) scaleY(0.85);
+  }
+
+  22% {
+    transform: translate(-2px, 2px) scaleX(1.1) scaleY(0.85);
+  }
+
+  25% {
+    transform: translate(1px, 2px) scaleX(1.1) scaleY(0.85);
+  }
+
+  28% {
+    transform: translateY(2px) scaleX(1.08) scaleY(0.88);
+  }
+
+  // Возвращается к исходному виду
+  45% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes eye-dot {
+
+  0%,
+  14%,
+  46%,
+  100% {
+    opacity: 1;
+  }
+
+  18%,
+  38% {
+    opacity: 0;
+  }
+}
+
+@keyframes eye-chevron {
+
+  0%,
+  14%,
+  46%,
+  100% {
+    opacity: 0;
+  }
+
+  18%,
+  38% {
+    opacity: 1;
+  }
+}
+
+@keyframes leaf-pop-at-bottom {
+
+  0%,
+  18% {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+
+  19% {
+    transform: translateX(-50%) scaleY(0.15);
+    opacity: 1;
+  }
+
+  22% {
+    transform: translateX(-50%) scale(1.6);
+    opacity: 0;
+  }
+
+  25%,
+  100% {
+    transform: translateX(-50%) scale(1.6);
+    opacity: 0;
+  }
+}
+
+@keyframes background-to-gray {
+
+  0%,
+  18% {
+    background-color: $white;
+  }
+
+  25%,
+  100% {
+    background-color: #aaa;
+  }
+}
+//фигуры
+
+.figure {
+  position: relative;
+  width: 240px;
+  height: 180px;
+  transform: scale(1.5);
+  transform-origin: center;
+
+  &__base {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    width: 450px;
+    height: 6px;
+    background: $base-color;
+    border-radius: 9px;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+
+  &__bar {
+    position: absolute;
+    isolation: isolate;
+    bottom: 28px;
+
+    border: 4px solid transparent;
+    border-bottom: 0;
+    border-radius: 8px 8px 0 0;
+    background-color: $white;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: -4px -4px 0;
+      z-index: 2;
+      border: 4px solid $figure-color;
+      border-bottom: 0;
+      border-radius: 8px 8px 0 0;
+      pointer-events: none;
+    }
+
+    &--wide {
+      left: 55px;
+      width: 70px;
+      height: 105px;
+    }
+
+    &--tall {
+      left: 145px;
+      width: 48px;
+      height: 145px;
+    }
+  }
+
+  &__stripe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 4px;
+    background: $detail-color;
+
+    &--left {
+      background: $left-stripe-color;
+    }
+
+    &--right {
+      background: $right-stripe-color;
+    }
+  }
+
+  // Отросток
+  &__sprout {
+    position: absolute;
+    top: -28px;
+    left: 50%;
+    width: 24px;
+    height: 30px;
+    transform: translateX(-50%);
+  }
+
+  &__stem {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 5px;
+    height: 27px;
+    background: $figure-color;
+    border-radius: 3px;
+    transform: translateX(-50%);
+  }
+
+  &__leaf {
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    width: 20px;
+    height: 26px;
+    background: $leaf-color;
+    border-radius: 50%;
+    transform: translateX(-50%);
+  }
+
+  // Глаза
+  &__eyes {
+    position: absolute;
+    top: 18%;
+    left: 40%;
+    display: flex;
+    gap: 7px;
+    transform: translateX(-50%);
+  }
+
+  &__eye {
+    position: relative;
+    width: 12px;
+    height: 16px;
+
+    &--right .figure__eye-line--upper {
+      transform: rotate(35deg);
+    }
+
+    &--right .figure__eye-line--lower {
+      transform: rotate(-35deg);
+    }
+
+    &--left .figure__eye-line--upper {
+      transform: rotate(-35deg);
+    }
+
+    &--left .figure__eye-line--lower {
+      transform: rotate(35deg);
+    }
+  }
+
+  &__eye-dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 7px;
+    height: 7px;
+    background: $figure-color;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  &__eye-line {
+    position: absolute;
+    left: 1px;
+    width: 10px;
+    height: 2px;
+    background: $figure-color;
+    border-radius: 2px;
+    opacity: 0;
+    z-index: 1;
+    
+    &--upper {
+      top: 4px;
+    }
+
+    &--lower {
+      top: 10px;
+    }
+  }
+}
+
+.page--light {
+  background: $white;
+  color: $background;
+
+  .animation-menu__link {
+    color: $background;
+    border-color: $background;
+
+    &:hover,
+    &--active {
+      color: $white;
+      background: $background;
+    }
+  }
+
+  .figure__bar--wide {
+    transform-origin: center bottom;
+    animation: squish-and-shake 1.4s ease-in-out infinite;
+  }
+
+  .figure__bar--wide .figure__eye-dot {
+    animation: eye-dot 1.4s linear infinite;
+  }
+
+  .figure__bar--wide .figure__eye-line {
+    animation: eye-chevron 1.4s linear infinite;
+  }
+
+  animation: background-to-gray 2.4s ease forwards;
+
+  .figure__bar--wide .figure__leaf {
+    animation: leaf-pop-at-bottom 2.4s ease forwards;
+  }
+}
