@@ -1,0 +1,269 @@
+// ── Переменные ──────────────────────────────────────────────
+
+$background: #151515;
+$white: #fff;
+
+
+// ── Базовые стили страницы ──────────────────────────────────
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background: $background;
+}
+
+.site-header {
+  padding: 20px;
+}
+
+.animation-menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  &__link {
+    padding: 10px 16px;
+    color: $white;
+    text-decoration: none;
+    border: 1px solid $white;
+    border-radius: 8px;
+    transition: background-color 0.2s, color 0.2s;
+
+    &:hover,
+    &--active {
+      color: $background;
+      background: $white;
+    }
+  }
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  min-height: 465px;
+}
+
+
+// ── Анимации ────────────────────────────────────────────────
+
+@keyframes blink {
+  0%,
+  45%,
+  55%,
+  100% {
+    transform: scaleY(1);
+  }
+
+  50% {
+    transform: scaleY(0.08);
+  }
+}
+
+@keyframes look {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes talk {
+  0%,
+  100% {
+    height: 30px;
+    width: 71px;
+  }
+
+  50% {
+    height: 40px;
+    width: 65px;
+  }
+}
+
+@keyframes ear-wiggle-left {
+  0%,
+  100% {
+    transform: rotate(-14deg);
+  }
+
+  50% {
+    transform: rotate(-22deg);
+  }
+}
+
+@keyframes ear-wiggle-right {
+  0%,
+  100% {
+    transform: rotate(14deg);
+  }
+
+  50% {
+    transform: rotate(22deg);
+  }
+}
+
+
+// ── Мордочка кота ───────────────────────────────────────────
+
+.cat {
+  position: relative;
+  width: 440px;
+  height: 465px;
+  overflow: hidden;
+  background: $background;
+
+  // Уши
+  &__ears-container,
+  &__ears {
+    position: absolute;
+    inset: 0;
+  }
+
+  &__ears-container {
+    height: 220px;
+    inset: 0 0 auto;
+  }
+
+  &__ear {
+    position: absolute;
+    top: 43px;
+    width: 76px;
+    height: 169px;
+    background: $white;
+    border-radius: 50% 50% 9% 9%;
+
+    &--left {
+      left: 67px;
+      transform: rotate(-14deg);
+
+      .cat__ear-inner {
+        right: -30px;
+        transform: rotate(-30deg);
+      }
+    }
+
+    &--right {
+      right: 67px;
+      transform: rotate(14deg);
+
+      .cat__ear-inner {
+        left: -30px;
+        transform: rotate(30deg);
+      }
+    }
+  }
+
+  &__ear-inner {
+    position: absolute;
+    bottom: -35px;
+    width: 99px;
+    height: 72px;
+    background: $background;
+    border-radius: 50% 50% 0 0;
+  }
+
+  // Глаза
+  &__eyes-container {
+    position: absolute;
+    top: 205px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+  }
+
+  &__eyes {
+    position: absolute;
+    inset: 0;
+  }
+
+  &__eye {
+    position: absolute;
+    top: 11px;
+    width: 96px;
+    height: 80px;
+    background: $white;
+    border-radius: 50%;
+    transform-origin: center;
+    animation: blink 4s infinite;
+
+    &--left {
+      left: 80px;
+
+      &::before {
+        right: 28px;
+        animation: look 1s ease-in-out infinite;
+      }
+    }
+
+    &--right {
+      right: 80px;
+
+      &::before {
+        left: 28px;
+        animation: look 1s ease-in-out infinite;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      width: 19px;
+      height: 39px;
+      background: $background;
+      border-radius: 50%;
+    }
+  }
+
+  // Нос
+  &__nose-container {
+    position: absolute;
+    top: 275px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+  }
+
+  &__nose {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    width: 30px;
+    height: 16px;
+    background: $white;
+    border-radius: 50%;
+    transform: translateX(-50%);
+  }
+
+  // Рот
+  &__mouth-container {
+    position: absolute;
+    top: 330px;
+    left: 0;
+    width: 100%;
+    height: 55px;
+  }
+
+  &__mouth {
+    position: absolute;
+    top: 11px;
+    left: 50%;
+    width: 71px;
+    height: 30px;
+    background: $white;
+    border-radius: 50%;
+    transform: translateX(-50%);
+  }
+}

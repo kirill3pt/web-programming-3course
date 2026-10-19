@@ -1,0 +1,210 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background: #151515;
+}
+
+.site-header {
+  padding: 20px;
+}
+
+.animation-menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.animation-menu__link {
+  padding: 10px 16px;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  transition: background-color 0.2s, color 0.2s;
+}
+.animation-menu__link:hover, .animation-menu__link--active {
+  color: #151515;
+  background: #fff;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  min-height: 465px;
+}
+
+@keyframes blink {
+  0%, 45%, 55%, 100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.08);
+  }
+}
+@keyframes look {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+}
+@keyframes talk {
+  0%, 100% {
+    height: 30px;
+    width: 71px;
+  }
+  50% {
+    height: 40px;
+    width: 65px;
+  }
+}
+@keyframes ear-wiggle-left {
+  0%, 100% {
+    transform: rotate(-14deg);
+  }
+  50% {
+    transform: rotate(-22deg);
+  }
+}
+@keyframes ear-wiggle-right {
+  0%, 100% {
+    transform: rotate(14deg);
+  }
+  50% {
+    transform: rotate(22deg);
+  }
+}
+.cat {
+  position: relative;
+  width: 440px;
+  height: 465px;
+  overflow: hidden;
+  background: #151515;
+}
+.cat__ears-container, .cat__ears {
+  position: absolute;
+  inset: 0;
+}
+.cat__ears-container {
+  height: 220px;
+  inset: 0 0 auto;
+}
+.cat__ear {
+  position: absolute;
+  top: 43px;
+  width: 76px;
+  height: 169px;
+  background: #fff;
+  border-radius: 50% 50% 9% 9%;
+}
+.cat__ear--left {
+  left: 67px;
+  transform: rotate(-14deg);
+}
+.cat__ear--left .cat__ear-inner {
+  right: -30px;
+  transform: rotate(-30deg);
+}
+.cat__ear--right {
+  right: 67px;
+  transform: rotate(14deg);
+}
+.cat__ear--right .cat__ear-inner {
+  left: -30px;
+  transform: rotate(30deg);
+}
+.cat__ear-inner {
+  position: absolute;
+  bottom: -35px;
+  width: 99px;
+  height: 72px;
+  background: #151515;
+  border-radius: 50% 50% 0 0;
+}
+.cat__eyes-container {
+  position: absolute;
+  top: 205px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+}
+.cat__eyes {
+  position: absolute;
+  inset: 0;
+}
+.cat__eye {
+  position: absolute;
+  top: 11px;
+  width: 96px;
+  height: 80px;
+  background: #fff;
+  border-radius: 50%;
+  transform-origin: center;
+  animation: blink 4s infinite;
+}
+.cat__eye--left {
+  left: 80px;
+}
+.cat__eye--left::before {
+  right: 28px;
+  animation: look 1s ease-in-out infinite;
+}
+.cat__eye--right {
+  right: 80px;
+}
+.cat__eye--right::before {
+  left: 28px;
+  animation: look 1s ease-in-out infinite;
+}
+.cat__eye::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  width: 19px;
+  height: 39px;
+  background: #151515;
+  border-radius: 50%;
+}
+.cat__nose-container {
+  position: absolute;
+  top: 275px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+}
+.cat__nose {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  width: 30px;
+  height: 16px;
+  background: #fff;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+.cat__mouth-container {
+  position: absolute;
+  top: 330px;
+  left: 0;
+  width: 100%;
+  height: 55px;
+}
+.cat__mouth {
+  position: absolute;
+  top: 11px;
+  left: 50%;
+  width: 71px;
+  height: 30px;
+  background: #fff;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}/*# sourceMappingURL=style.css.map */
