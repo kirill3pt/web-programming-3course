@@ -279,109 +279,7 @@ $base-color: #733063;
 $left-stripe-color: #b488a0;
 $right-stripe-color: #6799c2;
 
-//анимации
-@keyframes squish-and-shake {
 
-  0%,
-  100% {
-    transform: translateY(0) scale(1);
-  }
-
-  // Фигура прижимается к подложке
-  15% {
-    transform: translateY(2px) scaleX(1.08) scaleY(0.88);
-  }
-
-  // Короткая тряска в нижней точке
-  19% {
-    transform: translate(2px, 2px) scaleX(1.1) scaleY(0.85);
-  }
-
-  22% {
-    transform: translate(-2px, 2px) scaleX(1.1) scaleY(0.85);
-  }
-
-  25% {
-    transform: translate(1px, 2px) scaleX(1.1) scaleY(0.85);
-  }
-
-  28% {
-    transform: translateY(2px) scaleX(1.08) scaleY(0.88);
-  }
-
-  // Возвращается к исходному виду
-  45% {
-    transform: translateY(0) scale(1);
-  }
-}
-
-@keyframes eye-dot {
-
-  0%,
-  14%,
-  46%,
-  100% {
-    opacity: 1;
-  }
-
-  18%,
-  38% {
-    opacity: 0;
-  }
-}
-
-@keyframes eye-chevron {
-
-  0%,
-  14%,
-  46%,
-  100% {
-    opacity: 0;
-  }
-
-  18%,
-  38% {
-    opacity: 1;
-  }
-}
-
-@keyframes leaf-pop-at-bottom {
-
-  0%,
-  18% {
-    transform: translateX(-50%) scale(1);
-    opacity: 1;
-  }
-
-  19% {
-    transform: translateX(-50%) scaleY(0.15);
-    opacity: 1;
-  }
-
-  22% {
-    transform: translateX(-50%) scale(1.6);
-    opacity: 0;
-  }
-
-  25%,
-  100% {
-    transform: translateX(-50%) scale(1.6);
-    opacity: 0;
-  }
-}
-
-@keyframes background-to-gray {
-
-  0%,
-  18% {
-    background-color: $white;
-  }
-
-  25%,
-  100% {
-    background-color: #aaa;
-  }
-}
 //фигуры
 
 .figure {
@@ -467,11 +365,11 @@ $right-stripe-color: #6799c2;
 
   &__stem {
     position: absolute;
-    top: 0;
+    top: 10px;
     left: 50%;
     width: 5px;
-    height: 27px;
-    background: $figure-color;
+    height: 15px;
+    background: #733063;
     border-radius: 3px;
     transform: translateX(-50%);
   }
@@ -485,6 +383,7 @@ $right-stripe-color: #6799c2;
     background: $leaf-color;
     border-radius: 50%;
     transform: translateX(-50%);
+    transform-origin: center bottom;
   }
 
   // Глаза
@@ -549,39 +448,111 @@ $right-stripe-color: #6799c2;
       top: 10px;
     }
   }
+  &__mouth {
+    position: absolute;
+    top: 35%;
+    left: 36%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: $figure-color;
+    opacity: 0;
+    transform: translateX(-50%) scale(0.2);
+  }
+}
+
+@keyframes mouth-blow {
+
+  0%,
+  49%,
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.2);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateX(-50%) scale(2);
+  }
+
+  70% {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.2);
+  }
+}
+
+@keyframes leaf-after-blow {
+
+  0% {
+    opacity: 1;
+    transform: translateX(-50%) rotate(0) scale(1);
+  }
+
+  15% {
+    opacity: 1;
+    transform: translateX(-54%) rotate(-35deg) scale(1);
+  }
+
+  25% {
+    opacity: 1;
+    transform: translateX(-46%) rotate(35deg) scale(1);
+  }
+
+  35% {
+    opacity: 1;
+    transform: translateX(-54%) rotate(-35deg) scale(1);
+  }
+
+  45% {
+    opacity: 1;
+    transform: translateX(-46%) rotate(35deg) scale(1);
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) rotate(0) scale(1);
+  }
+}
+
+@keyframes lamp-flicker {
+  from {
+    filter: brightness(1);
+  }
+
+  to {
+    filter: brightness(2.5);
+  }
+}
+
+@keyframes background-after-blow {
+  0%,
+  54% {
+    background-color: $white;
+  }
+
+  70%,
+  100% {
+    background-color: #3d3d3d;
+  }
 }
 
 .page--light {
-  background: $white;
-  color: $background;
+  background-color: $white;
+  animation: background-after-blow 1s linear forwards;
 
-  .animation-menu__link {
-    color: $background;
-    border-color: $background;
-
-    &:hover,
-    &--active {
-      color: $white;
-      background: $background;
+  .figure__bar--tall .figure__mouth {
+      animation: mouth-blow 0.8s linear forwards;
     }
-  }
-
-  .figure__bar--wide {
-    transform-origin: center bottom;
-    animation: squish-and-shake 1.4s ease-in-out infinite;
-  }
-
-  .figure__bar--wide .figure__eye-dot {
-    animation: eye-dot 1.4s linear infinite;
-  }
-
-  .figure__bar--wide .figure__eye-line {
-    animation: eye-chevron 1.4s linear infinite;
-  }
-
-  animation: background-to-gray 2.4s ease forwards;
-
+  
   .figure__bar--wide .figure__leaf {
-    animation: leaf-pop-at-bottom 2.4s ease forwards;
+    animation: 
+      leaf-after-blow 1s linear forwards,
+      lamp-flicker 0.08s ease-in-out infinite alternate;
   }
 }
