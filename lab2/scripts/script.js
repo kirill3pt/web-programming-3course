@@ -500,7 +500,7 @@ function renderCategories() {
         oils: 'images/castrol.webp',
         parts: 'images/fuelpump.webp',
         batteries: 'images/akb.webp',
-        forgedWheels: 'images/wheels.webp'
+        tires: 'images/wheels.webp'
     };
 
     const categories = [...new Set(PRODUCTS.map(p => p.category))];
